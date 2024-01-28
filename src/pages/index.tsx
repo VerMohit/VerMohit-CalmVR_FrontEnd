@@ -1,8 +1,7 @@
 import React from "react";
 import { Heading } from "../components/Heading/Heading";
 import { CustomPage } from "../components/CusomtPage/CustomPage";
-import { Text } from "@mantine/core";
-import { SubHeading } from "../components/SubHeadings/SubHeadings";
+import { Text, Box } from "@mantine/core";
 import { About } from "../components/About/About";
 import { Facts } from "../components/Facts/Facts";
 import { Use } from "../components/Use/Use";
@@ -10,13 +9,16 @@ import { Demo } from "../components/Demo/Demo";
 import { Review } from "../components/Reviews/Reviews";
 import { Welcome } from "../components/Welcome/Welcome";
 import { Footer } from "../components/Footer/Footer";
+import * as classes from "./index.module.css"
 
 export default function HomePage() {
   return (
     <>      
 
       <Welcome />
-      <Heading />
+      <Box className={classes.stickyNav} > 
+        <Heading />
+      </Box>
 
       <CustomPage 
         idLabel={'About'}
@@ -30,17 +32,21 @@ export default function HomePage() {
         children={<Text><Facts/></Text>}
       />
 
-      <CustomPage 
-        idLabel={'How_It_Works'}
-        heading={'How It Works'}
-        children={<Text><Use/></Text>}
-      />
+      <Box style={{background: '#F8F9FA'} } >
 
-      <CustomPage 
-        idLabel={'Demo'}
-        heading={'Demo'}
-        children={<Text><Demo/></Text>}
-      />
+        <CustomPage 
+          idLabel={'How_It_Works'}
+          heading={'How It Works'}
+          children={<Text><Use/></Text>}
+        />
+
+        <CustomPage 
+          idLabel={'Demo'}
+          heading={'Demo'}
+          children={<Text><Demo/></Text>}
+        />
+
+      </Box>
 
       <CustomPage 
         idLabel={'Reviews'}

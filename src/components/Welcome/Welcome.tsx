@@ -6,7 +6,7 @@ export function Welcome() {
   return (
     <>
       {/* <Box id="Landing" className={classes.main} style={{ height: 'calc(100vh - var(--nav-height) - var(--borderH))' }}> */}
-      <Flex id="Landing" className={classes.main} style={{ height: 'calc(100vh - var(--nav-height))' }}>
+      <Flex id="Landing" className={classes.main}>
         <Flex className={classes.content}>
           <Title className={classes.title}>
             <span>Calm</span><i>VR</i>
